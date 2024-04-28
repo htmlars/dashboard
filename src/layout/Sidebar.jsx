@@ -31,6 +31,10 @@ const Sidebar = () => {
                                 key={index}>
                                 {item.icon}
                                 {expanded && <p>{item.title}</p>}
+                                {!expanded ?
+                                    <span className="group-hover:block text-sm absolute ml-10 bg-border px-2 py-1 rounded-md hidden">{item.title}</span>
+                                    : null
+                                }
                             </li>
                         ))}
                     </ul>
